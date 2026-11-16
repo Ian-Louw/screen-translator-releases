@@ -60,6 +60,16 @@ Turn on ⟲ and the translations follow the screen: scroll the page underneath a
 update on their own. While the screen is still, it sits idle: near-zero
 CPU and no translation calls.
 
+### Dropdowns and menus
+
+Open a dropdown list or a menu under the overlay and each item gets its own translation,
+drawn right over it. With auto-refresh on, the translations appear as the list opens and
+return to the page when it closes.
+
+<img src="media/dropdown.gif" alt="A Spanish order form under the overlay: the shipping-method dropdown opens, an English translation appears over each of its six items, then the list closes and the form is translated again" width="720">
+
+<sub>Fictional order form. Recorded from the real app with Windows OCR and DeepL.</sub>
+
 ### Hotkeys
 
 Global and configurable in Settings:

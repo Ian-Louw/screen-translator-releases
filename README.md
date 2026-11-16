@@ -70,6 +70,24 @@ return to the page when it closes.
 
 <sub>Fictional order form. Recorded from the real app with Windows OCR and DeepL.</sub>
 
+### Several overlays at once
+
+Need two parts of the screen translated, say a game's chat and its quest log? **New overlay**
+in the tray opens another one (up to four) next to the one you used last, with its settings
+copied. Each overlay keeps its own region, display mode, languages and translator, and they
+all come back after a restart. Overlays never translate each other. Refresh, copy and Settings
+act on the overlay you last clicked, dragged or hovered; show/hide and ghost mode act on all
+of them.
+
+### Let AI agents read the overlay
+
+Claude Code and Codex can read what the overlay sees: the text under it (translated too, if
+they ask), a picture of the region, and a signal when it changes. Turn it on in
+**Settings → Agents** and paste the one line shown there into a terminal. It is off by default
+and only reads: an agent can't move the overlay or change settings, and it works only on this
+PC, for your Windows account. A "● agent" badge lights on the toolbar while an agent reads.
+With several overlays open, an agent can ask for one by name.
+
 ### Hotkeys
 
 Global and configurable in Settings:
@@ -80,6 +98,7 @@ Global and configurable in Settings:
 | `Ctrl+Alt+T` | Show / hide the overlay |
 | `Ctrl+Alt+G` | Ghost (click-through) mode on / off |
 | `Ctrl+Alt+S` | Open Settings |
+| `Ctrl+Alt+C` | Copy the text under the overlay, ready to paste into any chat |
 
 ### Pick your translator and your OCR
 
@@ -126,6 +145,9 @@ one batched request.
 
 - **Screen text goes only to the provider you pick**: DeepL, Google, Azure, or your own
   LibreTranslate server.
+- **Agents read only when you turn them on.** With Settings → Agents on, an agent you
+  connect (Claude Code, Codex) can read the region's text and image, and what it reads goes
+  to that agent's own AI service, like anything else you show it.
 - **API keys are encrypted on disk** with Windows DPAPI (your user account only). They are
   never written in plain text, and another user or machine can't decrypt them.
 - **LibreTranslate keeps everything local.** Turn on **Offline / privacy mode** in Settings and
